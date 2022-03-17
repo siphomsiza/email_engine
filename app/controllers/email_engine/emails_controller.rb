@@ -62,7 +62,7 @@ module EmailEngine
       begin
         @message = Ahoy::Message.find_by_email_engine_id(params[:id])
         @message.status = 3
-        @message.opened_at = Time.now
+        @message.clicked_at = Time.now
         @message.save
       rescue
       end
